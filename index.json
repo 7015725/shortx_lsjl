@@ -1,6 +1,17 @@
 {
   "directActions": [
     {
+      "id": "SHARED-DA-0aa09882-567c-43a7-bedc-81c589f4a773",
+      "fileUrl": "ShortX-快捷app.txt",
+      "title": "快捷app",
+      "description": "长按应用图标 置顶/取消置顶\n支持搜索",
+      "versionCode": 1,
+      "updateTimeMillis": 1773656934630,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARED-DA-5ae3248d-120b-486f-a5bd-bc249cdc5811",
       "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
       "title": "ToolHub悬浮球_1.0.0",
