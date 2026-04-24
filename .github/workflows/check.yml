@@ -11,20 +11,14 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
       with:
-        java-version: '17'
-        distribution: 'temurin'
-    - name: Grant execute permission for gradlew
-      run: chmod +x tools/AutoGen/gradlew
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
-      with:
-        arguments: run -PGPR_USER=${{ secrets.GPR_USER }} -PGPR_API_KEY=${{ secrets.GPR_API_KEY }} --args='../../'
-        build-root-directory: tools/AutoGen
+        python-version: '3.12'
+    - name: Generate index
+      run: python tools/gen_index.py
+    - name: Verify index.json is valid JSON
+      run: python -c "import json; json.load(open('index.json'))"
