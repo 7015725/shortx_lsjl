@@ -1,5 +1,18 @@
 {
-  "directActions": [],
+  "directActions": [
+    {
+      "id": "SHARED-DA-5f4de6e8-ecf4-4fb0-9107-742c9b09d46b",
+      "fileUrl": "ShortX-电池优化名单.txt",
+      "title": "电池优化名单",
+      "description": "",
+      "versionCode": 1,
+      "updateTimeMillis": 1776917738162,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    }
+  ],
   "rules": [],
-  "code": []
+  "codeLibraries": [],
+  "updateTimeMillis": 1776917738162
 }
