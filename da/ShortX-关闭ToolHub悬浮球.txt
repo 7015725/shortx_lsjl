@@ -1,0 +1,25 @@
+{
+  "actions": [{
+    "@type": "type.googleapis.com/ShellCommand",
+    "command": "am broadcast -a shortx.wm.floatball.CLOSE",
+    "customContextDataKey": {
+    },
+    "note": "关闭ToolHub悬浮球",
+    "id": "A-4cf07e6e-f382-4654-869d-32e96cbedeb1"
+  }],
+  "id": "SHARED-DA-49985c6d-ba4a-4316-8025-e970be480372",
+  "lastUpdateTime": "1776987590188",
+  "createTime": "1766073813445",
+  "author": {
+    "name": "林深见鹿@xin-blog.com"
+  },
+  "title": "关闭ToolHub悬浮球",
+  "versionCode": "1",
+  "directActionSetId": "DS-93f04bb8-5e2f-4bce-b285-a4edfd42e40f",
+  "hook": {
+  },
+  "quit": {
+  }
+}
+###------###
+{"type":"da"}
