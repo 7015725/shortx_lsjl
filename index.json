@@ -10,6 +10,17 @@
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
+    },
+    {
+      "id": "SHARED-DA-4182070b-d0c8-4dbb-a54f-a3e0134d82fa",
+      "fileUrl": "ShortX-内置icon.txt",
+      "title": "内置icon",
+      "description": "",
+      "versionCode": 1,
+      "updateTimeMillis": 1776599232478,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
     }
   ],
   "rules": [],
