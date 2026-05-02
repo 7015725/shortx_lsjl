@@ -8,6 +8,12 @@ from pathlib import Path
 
 SHARE_HEADER_RE = re.compile(r"\r?\n###------###\r?\n")
 
+DESCRIPTION_FALLBACKS = {
+    "关闭ToolHub悬浮球": "发送广播关闭 ToolHub 悬浮球窗口。",
+    "电池优化名单": "查看并切换应用电池优化白名单状态，部分系统可能需要较高权限。",
+    "内置icon": "浏览 ShortX 内置 Remix 图标，支持分类、搜索、分页和点击复制。",
+}
+
 
 def split_share_content(text: str) -> tuple[str, dict]:
     parts = SHARE_HEADER_RE.split(text.strip(), maxsplit=1)
@@ -49,11 +55,16 @@ def parse_item(file_path: Path) -> dict | None:
     except (ValueError, TypeError):
         update_time = 0
 
+    title = data.get("title", file_path.stem)
+    description = data.get("description", "")
+    if not description:
+        description = DESCRIPTION_FALLBACKS.get(title, "")
+
     return {
         "id": data.get("id", ""),
         "fileUrl": file_path.name,
-        "title": data.get("title", file_path.stem),
-        "description": data.get("description", ""),
+        "title": title,
+        "description": description,
         "versionCode": version_code,
         "updateTimeMillis": update_time,
         "author": author_name,
