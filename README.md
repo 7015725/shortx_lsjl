@@ -57,6 +57,30 @@
 因此，如果你要上传一个指令到仓库，通过ShortX的分享功能导出指令后，需要手动修改一下版本号，以及确认下id是否一致。
 
 
+## 本地校验
+
+修改或新增指令后，可以在本地执行下面命令重新生成索引：
+
+```bash
+python tools/gen_index.py
+```
+
+检查 `index.json` 是否有变化：
+
+```bash
+git diff -- index.json
+```
+
+也可以用下面命令确认工作区状态：
+
+```bash
+python tools/gen_index.py
+git status --short
+```
+
+如果 `index.json` 没有差异，说明当前索引已经是最新的。
+
+
 ## 指令要求
 
 1. 禁止涉及用户数据安全隐私
