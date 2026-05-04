@@ -1,0 +1,61 @@
+{
+  "facts": [{
+    "@type": "type.googleapis.com/Broadcast",
+    "actions": ["shortx.toolhub.SHELL"],
+    "customContextDataKey": {
+    },
+    "id": "F-f7810638-87bf-4b95-9a4c-01e844407a84"
+  }],
+  "actions": [{
+    "@type": "type.googleapis.com/ExecuteJS",
+    "expression": "// # 这段代码的主要内容/用途：从广播 Intent 读取 cmd_b64，base64 解码后返回 cmd\nvar r \u003d \"err\";\ntry {\n  var b64 \u003d intent.getStringExtra(\"cmd_b64\");\n  var B \u003d java.lang.Class.forName(\"android.util.Base64\");\n  var S \u003d java.lang.Class.forName(\"java.lang.String\");\n  var T \u003d java.lang.Integer.TYPE;\n\n  var bytes \u003d B.getMethod(\"decode\", S, T).invoke(null, String(b64), new java.lang.Integer(0));\n  r \u003d String(S.getConstructor(java.lang.Class.forName(\"[B\"), S).newInstance(bytes, \"UTF-8\"));\n} catch (e) {\n  r \u003d \"err_\" + e;\n}\nr",
+    "customContextDataKey": {
+    },
+    "isDisabled": true,
+    "note": "极简版（假设 intent 一定存在、且一定有 cmd_b64）",
+    "id": "A-c3d1f55b-437e-451e-97e5-b0338df827e1"
+  }, {
+    "@type": "type.googleapis.com/ExecuteJS",
+    "expression": "// # 这段代码的主要内容/用途：从广播 Intent 读取 cmd_b64（含兜底），解码后仅返回 cmd\nvar r \u003d \"\";\ntry {\n  var b64 \u003d null;\n  try { b64 \u003d intent.getStringExtra(\"cmd_b64\"); } catch (e0) {}\n  if (!b64) {\n    try { var ex \u003d intent.getExtras(); if (ex) b64 \u003d ex.getString(\"cmd_b64\"); } catch (e1) {}\n  }\n  if (!b64) r \u003d \"err_no_cmd_b64\";\n  else {\n    var B \u003d java.lang.Class.forName(\"android.util.Base64\");\n    var S \u003d java.lang.Class.forName(\"java.lang.String\");\n    var bytes \u003d B.getMethod(\"decode\", S, java.lang.Integer.TYPE).invoke(null, String(b64), new java.lang.Integer(0));\n    r \u003d String(S.getConstructor(java.lang.Class.forName(\"[B\"), S).newInstance(bytes, \"UTF-8\"));\n  }\n} catch (e) {\n  r \u003d \"err_\" + e;\n}\nr",
+    "customContextDataKey": {
+    },
+    "note": "稳健版（多一个 extras 兜底，仍然很短）",
+    "id": "A-2d4f7283-bfc5-42db-ba63-eba8d9650166"
+  }, {
+    "@type": "type.googleapis.com/ShellCommand",
+    "command": "{jsRet}",
+    "customContextDataKey": {
+    },
+    "id": "A-8332355f-d713-4c61-90ea-c70903fbe0eb"
+  }, {
+    "@type": "type.googleapis.com/ShowDanmu",
+    "text": "广播执行：{jsRet}",
+    "customContextDataKey": {
+    },
+    "isDisabled": true,
+    "id": "A-4fa61346-c825-4f56-bcc3-500d0e7ecac0"
+  }, {
+    "@type": "type.googleapis.com/WriteClipboard",
+    "text": "{jsRet}",
+    "customContextDataKey": {
+    },
+    "isDisabled": true,
+    "id": "A-f1421a21-796c-4a17-9c2e-8cf4dac452a8"
+  }],
+  "id": "SHARE-rule-56b7c56d-cfce-4781-9998-47dfc283c49a",
+  "lastUpdateTime": "1773935826928",
+  "createTime": "1766283583501",
+  "author": {
+    "name": "林深见鹿@xin-blog.com"
+  },
+  "title": "ToolHub_shell执行",
+  "isEnabled": true,
+  "hook": {
+  },
+  "quit": {
+  },
+  "versionCode": "1",
+  "ruleSetId": "RS-3f87b481-6296-4a9d-9242-6f91e2a7e306"
+}
+###------###
+{"type":"rule"}
