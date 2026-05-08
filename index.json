@@ -26,7 +26,7 @@
       "id": "SHARED-DA-49985c6d-ba4a-4316-8025-e970be480372",
       "fileUrl": "ShortX-关闭ToolHub悬浮球.txt",
       "title": "关闭ToolHub悬浮球",
-      "description": "",
+      "description": "发送广播关闭 ToolHub 悬浮球窗口。",
       "versionCode": 1,
       "updateTimeMillis": 1776987590188,
       "author": "林深见鹿@xin-blog.com",
@@ -37,7 +37,7 @@
       "id": "SHARED-DA-5f4de6e8-ecf4-4fb0-9107-742c9b09d46b",
       "fileUrl": "ShortX-电池优化名单.txt",
       "title": "电池优化名单",
-      "description": "",
+      "description": "查看并切换应用电池优化白名单状态，部分系统可能需要较高权限。",
       "versionCode": 1,
       "updateTimeMillis": 1776917738162,
       "author": "林深见鹿@xin-blog.com",
@@ -48,7 +48,7 @@
       "id": "SHARED-DA-4182070b-d0c8-4dbb-a54f-a3e0134d82fa",
       "fileUrl": "ShortX-内置icon.txt",
       "title": "内置icon",
-      "description": "",
+      "description": "浏览 ShortX 内置 Remix 图标，支持分类、搜索、分页和点击复制。",
       "versionCode": 1,
       "updateTimeMillis": 1776599232478,
       "author": "林深见鹿@xin-blog.com",
@@ -57,6 +57,17 @@
     }
   ],
   "rules": [
+    {
+      "id": "SHARE-rule-56b7c56d-cfce-4781-9998-47dfc283c49a",
+      "fileUrl": "ShortX-ToolHub_shell执行.txt",
+      "title": "ToolHub_shell执行",
+      "description": "",
+      "versionCode": 1,
+      "updateTimeMillis": 1773935826928,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
     {
       "id": "SHARE-rule-45ef312d-9707-4444-aea0-237688b35cc5",
       "fileUrl": "ShortX-拾字__有道翻译_.txt",
