@@ -12,12 +12,12 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-5ae3248d-120b-486f-a5bd-bc249cdc5811",
-      "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
-      "title": "ToolHub悬浮球_1.0.0",
-      "description": "一个悬浮在屏幕上的快捷面板。点一下浮球，就能展开一个多宫格面板，把常用的功能、应用、快捷指令都放进去，一键直达。",
+      "id": "SHARED-DA-5f4de6e8-ecf4-4fb0-9107-742c9b09d46b",
+      "fileUrl": "ShortX-电池优化名单.txt",
+      "title": "电池优化名单",
+      "description": "查看并切换应用电池优化白名单状态，部分系统可能需要较高权限。",
       "versionCode": 1,
-      "updateTimeMillis": 1776741586443,
+      "updateTimeMillis": 1776917738162,
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
@@ -34,12 +34,12 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-5f4de6e8-ecf4-4fb0-9107-742c9b09d46b",
-      "fileUrl": "ShortX-电池优化名单.txt",
-      "title": "电池优化名单",
-      "description": "查看并切换应用电池优化白名单状态，部分系统可能需要较高权限。",
+      "id": "SHARED-DA-5ae3248d-120b-486f-a5bd-bc249cdc5811",
+      "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
+      "title": "ToolHub悬浮球_1.0.0",
+      "description": "一个悬浮在屏幕上的快捷面板。点一下浮球，就能展开一个多宫格面板，把常用的功能、应用、快捷指令都放进去，一键直达。",
       "versionCode": 1,
-      "updateTimeMillis": 1776917738162,
+      "updateTimeMillis": 1776741586443,
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
@@ -58,6 +58,17 @@
   ],
   "rules": [
     {
+      "id": "SHARE-rule-bac0bdcd-90f9-4067-bf4a-9050c58c745f",
+      "fileUrl": "ShortX-拾字_文字选择工具.txt",
+      "title": "拾字_文字选择工具",
+      "description": "百度/有道 翻译引擎二合一",
+      "versionCode": 1,
+      "updateTimeMillis": 1779551040772,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARE-rule-56b7c56d-cfce-4781-9998-47dfc283c49a",
       "fileUrl": "ShortX-ToolHub_shell执行.txt",
       "title": "ToolHub_shell执行",
@@ -67,30 +78,8 @@
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
-    },
-    {
-      "id": "SHARE-rule-45ef312d-9707-4444-aea0-237688b35cc5",
-      "fileUrl": "ShortX-拾字__有道翻译_.txt",
-      "title": "拾字 (有道翻译)",
-      "description": "文字选择工具+翻译",
-      "versionCode": 1,
-      "updateTimeMillis": 1777020321737,
-      "author": "林深见鹿@xin-blog.com",
-      "tags": [],
-      "requireMinShortXProtoVersion": 0
-    },
-    {
-      "id": "SHARE-rule-b09bbc6e-2d2c-4644-a48b-40f5e520662a",
-      "fileUrl": "ShortX-拾字_百度翻译_.txt",
-      "title": "拾字(百度翻译)",
-      "description": "文字选择工具+翻译",
-      "versionCode": 1,
-      "updateTimeMillis": 1777020363799,
-      "author": "林深见鹿@xin-blog.com",
-      "tags": [],
-      "requireMinShortXProtoVersion": 0
     }
   ],
   "codeLibraries": [],
-  "updateTimeMillis": 1777020363799
+  "updateTimeMillis": 1779551040772
 }
