@@ -1,7 +1,40 @@
 {
   "directActions": [
     {
-      "id": "SHARED-DA-0aa09882-567c-43a7-bedc-81c589f4a773",
+      "id": "SHARED-DA-8f7e319f-1e52-4cfd-957b-6197de9d993c",
+      "fileUrl": "ShortX-内置icon.txt",
+      "title": "内置icon",
+      "description": "浏览 ShortX 内置 Remix 图标，支持分类、搜索、分页和点击复制。",
+      "versionCode": 1,
+      "updateTimeMillis": 1776599232478,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
+      "id": "SHARED-DA-22529b12-92be-4204-a9af-0fef271cb806",
+      "fileUrl": "ShortX-快捷方式icon浏览器.txt",
+      "title": "快捷方式icon浏览器",
+      "description": "",
+      "versionCode": 1,
+      "updateTimeMillis": 1780202898951,
+      "author": "ShortX",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
+      "id": "SHARED-DA-e4319be9-80d7-481b-ad06-9e195145971c",
+      "fileUrl": "ShortX-待办事项.txt",
+      "title": "待办事项",
+      "description": "",
+      "versionCode": 1,
+      "updateTimeMillis": 1779691000927,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
+      "id": "SHARED-DA-06eca758-2edb-4275-b54a-fc3d6ef9dcdd",
       "fileUrl": "ShortX-快捷app.txt",
       "title": "快捷app",
       "description": "长按应用图标 置顶/取消置顶\n支持搜索",
@@ -12,18 +45,18 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-5f4de6e8-ecf4-4fb0-9107-742c9b09d46b",
-      "fileUrl": "ShortX-电池优化名单.txt",
-      "title": "电池优化名单",
-      "description": "查看并切换应用电池优化白名单状态，部分系统可能需要较高权限。",
+      "id": "SHARED-DA-b2e26cd1-7754-4ad1-b42d-e14a83f2454c",
+      "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
+      "title": "ToolHub悬浮球_1.0.0",
+      "description": "一个悬浮在屏幕上的快捷面板。点一下浮球，就能展开一个多宫格面板，把常用的功能、应用、快捷指令都放进去，一键直达。",
       "versionCode": 1,
-      "updateTimeMillis": 1776917738162,
+      "updateTimeMillis": 1779755375276,
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-49985c6d-ba4a-4316-8025-e970be480372",
+      "id": "SHARED-DA-948414eb-42b8-4611-996a-3561037c6909",
       "fileUrl": "ShortX-关闭ToolHub悬浮球.txt",
       "title": "关闭ToolHub悬浮球",
       "description": "发送广播关闭 ToolHub 悬浮球窗口。",
@@ -34,29 +67,40 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-5ae3248d-120b-486f-a5bd-bc249cdc5811",
-      "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
-      "title": "ToolHub悬浮球_1.0.0",
-      "description": "一个悬浮在屏幕上的快捷面板。点一下浮球，就能展开一个多宫格面板，把常用的功能、应用、快捷指令都放进去，一键直达。",
+      "id": "SHARED-DA-7282f4e5-5986-4f30-919a-46d011cc6523",
+      "fileUrl": "ShortX-电池优化名单.txt",
+      "title": "电池优化名单",
+      "description": "查看并切换应用电池优化白名单状态，部分系统可能需要较高权限。",
       "versionCode": 1,
-      "updateTimeMillis": 1776741586443,
-      "author": "林深见鹿@xin-blog.com",
-      "tags": [],
-      "requireMinShortXProtoVersion": 0
-    },
-    {
-      "id": "SHARED-DA-4182070b-d0c8-4dbb-a54f-a3e0134d82fa",
-      "fileUrl": "ShortX-内置icon.txt",
-      "title": "内置icon",
-      "description": "浏览 ShortX 内置 Remix 图标，支持分类、搜索、分页和点击复制。",
-      "versionCode": 1,
-      "updateTimeMillis": 1776599232478,
-      "author": "林深见鹿@xin-blog.com",
+      "updateTimeMillis": 1780202916318,
+      "author": "ShortX",
       "tags": [],
       "requireMinShortXProtoVersion": 0
     }
   ],
   "rules": [
+    {
+      "id": "SHARE-rule-b9fa3e1a-cb0c-41fe-ba94-15e67db03756",
+      "fileUrl": "ShortX-获取系统下载链接.txt",
+      "title": "获取系统下载链接",
+      "description": "com.android.providers.downloads\n\n设备一加ace3",
+      "versionCode": 1,
+      "updateTimeMillis": 1779872478093,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
+      "id": "SHARE-rule-cb3b4661-c61a-4d2e-8e40-81d167f46480",
+      "fileUrl": "ShortX-待办事项广播监听.txt",
+      "title": "待办事项广播监听",
+      "description": "",
+      "versionCode": 1,
+      "updateTimeMillis": 1780203057784,
+      "author": "ShortX",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
     {
       "id": "SHARE-rule-bac0bdcd-90f9-4067-bf4a-9050c58c745f",
       "fileUrl": "ShortX-拾字_文字选择工具.txt",
@@ -69,7 +113,7 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARE-rule-56b7c56d-cfce-4781-9998-47dfc283c49a",
+      "id": "SHARE-rule-73955b5d-5207-494d-9541-07e953da486c",
       "fileUrl": "ShortX-ToolHub_shell执行.txt",
       "title": "ToolHub_shell执行",
       "description": "",
@@ -81,5 +125,5 @@
     }
   ],
   "codeLibraries": [],
-  "updateTimeMillis": 1779551040772
+  "updateTimeMillis": 1780203057784
 }
