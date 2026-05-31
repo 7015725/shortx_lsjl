@@ -45,6 +45,17 @@
       "requireMinShortXProtoVersion": 0
     },
     {
+      "id": "SHARED-DA-42a4cd61-161d-4ddd-b17b-9bff7e137e6d",
+      "fileUrl": "ShortX-后台录音_启停.txt",
+      "title": "后台录音_启停",
+      "description": "v1.1\n一键开始/停止后台麦克风录音。首次点击开始，再次点击停止。\n文件保存到 /sdcard/Download/ShortX-Records。\n已增强错误检查：启动失败返回 ERROR；停止时检查文件是否存在和大小。\n\n依赖 App/包名：\n- Termux：com.termux，需在 Termux 执行 pkg install termux-api，提供 termux-microphone-record。\n- Termux:API：com.termux.api，需安装同源同签名 APK，并授权麦克风。\n- ShortX：tornaco.apps.shortx，仅负责触发命令，不替代 Termux:API 权限。\n\nroot 授权/修复命令：\nsu -c 'pm grant com.termux.api android.permission.RECORD_AUDIO'\nsu -c 'cmd appops set com.termux.api RECORD_AUDIO allow'\nsu -c 'cmd appops set com.termux MANAGE_EXTERNAL_STORAGE allow'\nsu -c 'cmd appops set com.termux.api MANAGE_EXTERNAL_STORAGE allow'\n\n说明：RECORD_AUDIO 只解决录音权限；写入 /sdcard/Download 还需要 com.termux/com.termux.api 具备共享存储/所有文件访问能力，否则会出现 open failed: EPERM。\n已使用 Binder+文件双写注入，保证立即可见并持久化。\n\n来源信息：xin-blog.com",
+      "versionCode": 1,
+      "updateTimeMillis": 1780209957170,
+      "author": "ShortX",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARED-DA-b2e26cd1-7754-4ad1-b42d-e14a83f2454c",
       "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
       "title": "ToolHub悬浮球_1.0.0",
@@ -125,5 +136,5 @@
     }
   ],
   "codeLibraries": [],
-  "updateTimeMillis": 1780203057784
+  "updateTimeMillis": 1780209957170
 }
