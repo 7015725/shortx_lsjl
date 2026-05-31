@@ -1,0 +1,28 @@
+{
+  "actions": [{
+    "@type": "type.googleapis.com/ShellCommand",
+    "command": "sh -c \u0027D\u003d/sdcard/Download/ShortX-Records; mkdir -p \"$D\" || { echo \"ERROR mkdir_failed $D\"; exit 1; }; MARK\u003d\"$D/.recording\"; MIC\u003d/data/data/com.termux/files/usr/bin/termux-microphone-record; TOAST\u003d/data/data/com.termux/files/usr/bin/termux-toast; if [ ! -x \"$MIC\" ]; then echo \"ERROR missing termux-microphone-record; run: pkg install termux-api\"; exit 2; fi; if [ -f \"$MARK\" ]; then OLD\u003d$(cat \"$MARK\" 2\u003e/dev/null); \"$MIC\" -q \u003e/dev/null 2\u003e\u00261 || true; rm -f \"$MARK\"; if [ -n \"$OLD\" ] \u0026\u0026 [ -s \"$OLD\" ]; then SZ\u003d$(stat -c%s \"$OLD\" 2\u003e/dev/null || echo 0); \"$TOAST\" \"ShortX录音已停止：$OLD ($SZ bytes)\" \u003e/dev/null 2\u003e\u00261 || true; echo \"STOP $OLD size\u003d$SZ\"; else \"$TOAST\" \"ShortX录音已停止，但未发现文件：$OLD\" \u003e/dev/null 2\u003e\u00261 || true; echo \"STOP_NO_FILE ${OLD:-unknown}\"; fi; else F\u003d\"$D/shortx_$(date +%Y%m%d_%H%M%S).aac\"; OUT\u003d$(\"$MIC\" -f \"$F\" -l 0 -e aac 2\u003e\u00261); RC\u003d$?; if [ $RC -ne 0 ] || echo \"$OUT\" | grep -qi \"Recording error\"; then rm -f \"$MARK\"; \"$TOAST\" \"ShortX录音启动失败：$OUT\" \u003e/dev/null 2\u003e\u00261 || true; echo \"ERROR start_failed rc\u003d$RC $OUT\"; exit 3; fi; echo \"$F\" \u003e \"$MARK\" || { echo \"ERROR mark_failed $MARK\"; exit 4; }; \"$TOAST\" \"ShortX开始录音：$F\" \u003e/dev/null 2\u003e\u00261 || true; echo \"START $F\"; fi\u0027",
+    "customContextDataKey": {
+    },
+    "note": "切换后台麦克风录音：第一次执行开始录音，再次执行停止。启动失败会返回 ERROR；停止时会检查文件是否真实存在且大小大于 0。依赖 Termux(com.termux)+Termux:API(com.termux.api)。",
+    "id": "A-b43e6966-11fc-4503-9a16-ea14dc073617"
+  }],
+  "id": "SHARED-DA-42a4cd61-161d-4ddd-b17b-9bff7e137e6d",
+  "lastUpdateTime": "1780209957170",
+  "createTime": "1780187239786",
+  "author": {
+    "name": "ShortX"
+  },
+  "title": "后台录音_启停",
+  "description": "v1.1\n一键开始/停止后台麦克风录音。首次点击开始，再次点击停止。\n文件保存到 /sdcard/Download/ShortX-Records。\n已增强错误检查：启动失败返回 ERROR；停止时检查文件是否存在和大小。\n\n依赖 App/包名：\n- Termux：com.termux，需在 Termux 执行 pkg install termux-api，提供 termux-microphone-record。\n- Termux:API：com.termux.api，需安装同源同签名 APK，并授权麦克风。\n- ShortX：tornaco.apps.shortx，仅负责触发命令，不替代 Termux:API 权限。\n\nroot 授权/修复命令：\nsu -c \u0027pm grant com.termux.api android.permission.RECORD_AUDIO\u0027\nsu -c \u0027cmd appops set com.termux.api RECORD_AUDIO allow\u0027\nsu -c \u0027cmd appops set com.termux MANAGE_EXTERNAL_STORAGE allow\u0027\nsu -c \u0027cmd appops set com.termux.api MANAGE_EXTERNAL_STORAGE allow\u0027\n\n说明：RECORD_AUDIO 只解决录音权限；写入 /sdcard/Download 还需要 com.termux/com.termux.api 具备共享存储/所有文件访问能力，否则会出现 open failed: EPERM。\n已使用 Binder+文件双写注入，保证立即可见并持久化。\n\n来源信息：xin-blog.com",
+  "versionCode": "1",
+  "directActionSetId": "DS-4ca00e3e-39fb-4cc6-83e1-bbf1aad3fc26",
+  "icon": "record-disc",
+  "hook": {
+  },
+  "quit": {
+  },
+  "iconColor": "monet"
+}
+###------###
+{"type":"da"}
