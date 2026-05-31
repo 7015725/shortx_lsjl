@@ -1,0 +1,54 @@
+{
+  "facts": [{
+    "@type": "type.googleapis.com/MethodHook",
+    "packageName": "com.android.providers.downloads",
+    "className": "com.android.providers.downloads.DownloadProvider",
+    "methodName": "insert",
+    "beforeMethod": true,
+    "expressions": [{
+      "expressionMVEL": "param.args[1].get(\"uri\")",
+      "contextKey": "downloadUrl"
+    }, {
+      "expressionMVEL": "param.args[1].get(\"notificationpackage\")",
+      "contextKey": "notificationPkg"
+    }, {
+      "expressionMVEL": "param.args[1].get(\"title\")",
+      "contextKey": "downloadTitle"
+    }],
+    "lifecycle": "LoadedPackage",
+    "customContextDataKey": {
+    },
+    "id": "F-77fe1cc5-7faf-4428-94d2-92d05c953800"
+  }],
+  "actions": [{
+    "@type": "type.googleapis.com/ShowAlertDialog",
+    "title": "结果",
+    "message": "文件名称：{downloadTitle}\n来源：{notificationPkg}\n文件链接{downloadUrl}",
+    "cancelable": true,
+    "style": {
+      "fontScale": 1.0
+    },
+    "customContextDataKey": {
+    },
+    "id": "A-9aea3a9d-6487-4a9e-9980-634edb881837"
+  }],
+  "id": "SHARE-rule-b9fa3e1a-cb0c-41fe-ba94-15e67db03756",
+  "lastUpdateTime": "1779872478093",
+  "createTime": "1779588911089",
+  "author": {
+    "name": "林深见鹿@xin-blog.com"
+  },
+  "title": "获取系统下载链接",
+  "description": "com.android.providers.downloads\n\n设备一加ace3",
+  "isEnabled": true,
+  "hook": {
+  },
+  "quit": {
+  },
+  "versionCode": "1",
+  "ruleSetId": "RS-28323c0e-dbc1-4fc1-bbbf-7a5cea635f05",
+  "icon": "three-slashes",
+  "iconColor": "#FFA2DDEF"
+}
+###------###
+{"type":"rule"}

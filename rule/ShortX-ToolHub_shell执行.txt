@@ -42,7 +42,7 @@
     "isDisabled": true,
     "id": "A-f1421a21-796c-4a17-9c2e-8cf4dac452a8"
   }],
-  "id": "SHARE-rule-56b7c56d-cfce-4781-9998-47dfc283c49a",
+  "id": "SHARE-rule-73955b5d-5207-494d-9541-07e953da486c",
   "lastUpdateTime": "1773935826928",
   "createTime": "1766283583501",
   "author": {

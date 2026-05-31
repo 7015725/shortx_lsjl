@@ -1,0 +1,63 @@
+{
+  "facts": [{
+    "@type": "type.googleapis.com/Broadcast",
+    "actions": ["shortx.wmui.todo.FLAG_CHANGED"],
+    "customContextDataKey": {
+    },
+    "id": "F-8762ec07-f1bc-4679-9a19-44fe6465fafa"
+  }],
+  "actions": [{
+    "@type": "type.googleapis.com/ShellCommand",
+    "command": "settings get global shortx_wmui_todo_has_unfinished_v1",
+    "customContextDataKey": {
+    },
+    "id": "A-073c4ac5-37d3-4131-a8c9-a61208718e84"
+  }, {
+    "@type": "type.googleapis.com/IfThenElse",
+    "If": [{
+      "@type": "type.googleapis.com/MatchMVEL",
+      "expression": "{shellOut} \u003d\u003d 1",
+      "customContextDataKey": {
+      },
+      "id": "C-23a48af3-8013-4d95-9827-4bbd6725505b"
+    }],
+    "IfActions": [{
+      "@type": "type.googleapis.com/ShowStatusBarChip",
+      "text": "有待办事项",
+      "clickAction": [{
+        "@type": "type.googleapis.com/FromDA",
+        "daId": "SHARED-DA-93ecdd8e-5a22-4362-ba18-04f27a7cf1e7",
+        "customContextDataKey": {
+        },
+        "id": "A-ab80da4b-fd6a-40c8-a139-cb4e913119a0"
+      }],
+      "customContextDataKey": {
+      },
+      "id": "A-563606eb-97a1-40c7-a870-8b4716661d70"
+    }],
+    "ElseActions": [{
+      "@type": "type.googleapis.com/HideStatusBarClip",
+      "customContextDataKey": {
+      },
+      "id": "A-58864626-2c9c-44a7-9231-ec6798625e16"
+    }],
+    "customContextDataKey": {
+    },
+    "id": "A-df809f98-4149-4c50-b4a8-c38efd0bace6"
+  }],
+  "id": "SHARE-rule-cb3b4661-c61a-4d2e-8e40-81d167f46480",
+  "lastUpdateTime": "1780203057784",
+  "createTime": "1766506564152",
+  "author": {
+    "name": "ShortX"
+  },
+  "title": "待办事项广播监听",
+  "hook": {
+  },
+  "quit": {
+  },
+  "versionCode": "1",
+  "ruleSetId": "RS-3f87b481-6296-4a9d-9242-6f91e2a7e306"
+}
+###------###
+{"type":"rule"}
