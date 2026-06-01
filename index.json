@@ -124,12 +124,12 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARE-rule-e9ec0af1-5636-4b83-ab08-d9e10e8303d7",
+      "id": "SHARE-rule-b162823d-e2ad-4d86-a422-0cd9fbe074c5",
       "fileUrl": "ShortX-拾字_文字选择工具.txt",
       "title": "拾字_文字选择工具",
-      "description": "V1.4\n更新日志\n1. 放大镜升级为系统原生：选字时改用 Android 系统原生放大镜，显示更稳定。\n2. 兼容性说明：仅支持 Android 9+（API 28 及以上）；低版本会自动关闭该功能并提示。\n3. 新增可调参数（DIY）：放大镜大小、长宽比例、圆角、上移偏移、缩放倍率等参数，都可在顶部常量区直接修改。\n4. 视觉优化：支持椭圆长条 / 胶囊样式，阅读更清晰。\n5. 体验优化：修复偏移参数不易生效的问题；异常提示增加节流，避免连续弹窗刷屏。\n6. 代码清理：移除旧版自绘放大镜相关冗余代码，整体更轻、更易维护。",
+      "description": "v1.4.1\n修复 HyperOS 3 崩溃软重启问题",
       "versionCode": 1,
-      "updateTimeMillis": 1780226102030,
+      "updateTimeMillis": 1780318195564,
       "author": "ShortX",
       "tags": [],
       "requireMinShortXProtoVersion": 0
