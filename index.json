@@ -67,6 +67,17 @@
       "requireMinShortXProtoVersion": 0
     },
     {
+      "id": "SHARE-rule-b162823d-e2ad-4d86-a422-0cd9fbe074c5",
+      "fileUrl": "ShortX-拾字_文字选择工具.txt",
+      "title": "拾字_文字选择工具",
+      "description": "v1.4.1\n修复 HyperOS 3 崩溃软重启问题",
+      "versionCode": 1,
+      "updateTimeMillis": 1780318195564,
+      "author": "ShortX",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARED-DA-948414eb-42b8-4611-996a-3561037c6909",
       "fileUrl": "ShortX-关闭ToolHub悬浮球.txt",
       "title": "关闭ToolHub悬浮球",
@@ -136,5 +147,5 @@
     }
   ],
   "codeLibraries": [],
-  "updateTimeMillis": 1780226102030
+  "updateTimeMillis": 1780318195564
 }
