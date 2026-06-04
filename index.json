@@ -67,6 +67,17 @@
       "requireMinShortXProtoVersion": 0
     },
     {
+      "id": "SHARED-DA-a45241e1-8c6c-4b04-a391-393e4b10baa9",
+      "fileUrl": "ShortX-变量调用示例.txt",
+      "title": "变量调用示例",
+      "description": "演示 ShortX 一键指令中 Shell 任务和 JS 任务分别执行，并用 Toast 分别输出两边的返回内容。\nShell：局部变量用 {局部示例}，全局变量用 {globalVarOf$全局示例}。\nJS：局部变量用 localVarOf$局部示例，全局变量用 globalVarOf$全局示例。\n执行后会先 Toast 显示 Shell 输出，再 Toast 显示 JS 输出，并把两段内容写入剪贴板。",
+      "versionCode": 2,
+      "updateTimeMillis": 1780445607823,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARED-DA-948414eb-42b8-4611-996a-3561037c6909",
       "fileUrl": "ShortX-关闭ToolHub悬浮球.txt",
       "title": "关闭ToolHub悬浮球",
@@ -90,6 +101,17 @@
     }
   ],
   "rules": [
+    {
+      "id": "SHARE-rule-2486ee6c-466c-4d76-b105-076181c59129",
+      "fileUrl": "ShortX-变量调用规则示例_列表可见.txt",
+      "title": "变量调用规则示例_列表可见",
+      "description": "列表可见版规则实例：采用之前验证成功的 Broadcast + ShowDanmu 结构，展示 Shell 和 JS 中读取局部变量、全局变量的写法。触发广播 action：shortx.var.demo.VISIBLE_RULE。完整可执行变量链路在一键指令「变量调用示例」。",
+      "versionCode": 1,
+      "updateTimeMillis": 1780444777311,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
     {
       "id": "SHARE-rule-b9fa3e1a-cb0c-41fe-ba94-15e67db03756",
       "fileUrl": "ShortX-获取系统下载链接.txt",
@@ -133,8 +155,19 @@
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
+    },
+    {
+      "id": "SHARE-rule-e6072f57-ecdd-47ef-ad75-ad64f6bd6e39",
+      "fileUrl": "ShortX-变量调用规则示例.txt",
+      "title": "变量调用规则示例",
+      "description": "自动规则实例：演示 ShortX 规则动作链里局部变量和全局变量在 Shell 与 JS 中的读取方法。触发广播 action：shortx.var.demo.RULE。Shell 局部变量用 {局部示例}，Shell 全局变量用 {globalVarOf$全局示例}；JS 局部变量用 localVarOf$局部示例，JS 全局变量用 globalVarOf$全局示例。",
+      "versionCode": 1,
+      "updateTimeMillis": 1780444403585,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
     }
   ],
   "codeLibraries": [],
-  "updateTimeMillis": 1780318195564
+  "updateTimeMillis": 1780445607823
 }
