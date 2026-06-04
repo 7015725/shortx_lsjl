@@ -1,0 +1,109 @@
+{
+  "actions": [
+    {
+      "@type": "type.googleapis.com/NoAction",
+      "icon": "braces",
+      "customContextDataKey": {},
+      "note": "变量调用示例：Shell 任务和 JS 任务分别执行，并分别用 Toast 输出返回内容",
+      "id": "A-e162a691-ba67-444f-82f5-0bdae37153c9"
+    },
+    {
+      "@type": "type.googleapis.com/CreateLocalVar",
+      "localVar": {
+        "name": "局部示例",
+        "type": {
+          "@type": "type.googleapis.com/StringVar"
+        }
+      },
+      "customContextDataKey": {},
+      "note": "创建局部变量：只在当前动作链内使用",
+      "id": "A-4447707f-7dc8-49f6-8637-d47158dad218"
+    },
+    {
+      "@type": "type.googleapis.com/WriteLocalVar",
+      "varName": "局部示例",
+      "valueAsString": "这是局部变量：本次一键指令内传递",
+      "autoCreateIfMissing": true,
+      "customContextDataKey": {},
+      "note": "写入局部变量；Shell 用 {局部示例}，JS 用 localVarOf$局部示例 读取",
+      "id": "A-94177568-576e-41d0-a42c-f9114243690c"
+    },
+    {
+      "@type": "type.googleapis.com/WriteGlobalVar",
+      "varName": "全局示例",
+      "valueAsString": "这是全局变量：可被其他规则/一键指令复用",
+      "op": "WriteGlobalVarOp_Override",
+      "autoCreateIfMissing": true,
+      "customContextDataKey": {},
+      "note": "写入全局变量；Shell 用 {globalVarOf$全局示例}，JS 用 globalVarOf$全局示例 读取",
+      "id": "A-f214344f-3100-4d0c-b355-e2a61f0dceca"
+    },
+    {
+      "@type": "type.googleapis.com/ShellCommand",
+      "command": "printf '【Shell任务返回】\\n局部变量=%s\\n全局变量=%s\\n' '{局部示例}' '{globalVarOf$全局示例}' | tee /sdcard/Download/shortx_var_demo_shell.txt",
+      "customContextDataKey": {
+        "keys": [
+          {
+            "first": "shellOut",
+            "second": "shellDemoOutput"
+          }
+        ]
+      },
+      "note": "Shell 任务：单独读取局部变量和全局变量，并把 shellOut 命名为 shellDemoOutput",
+      "id": "A-9330f928-77d4-4a81-9db7-328eae39492f"
+    },
+    {
+      "@type": "type.googleapis.com/ShowToast",
+      "message": "{shellDemoOutput}",
+      "customContextDataKey": {},
+      "note": "Toast 输出 Shell 任务返回内容",
+      "id": "A-f7eddb15-bc5f-4c09-9c6b-60a8b95cb108"
+    },
+    {
+      "@type": "type.googleapis.com/ExecuteJS",
+      "expression": "// ShortX 变量调用示例：JS 任务单独读取局部变量和全局变量\n// Rhino ES5：只用 var / function，不用 let / const / 箭头函数。\nvar localValue = \"\";\nvar globalValue = \"\";\ntry {\n  localValue = String(localVarOf$局部示例);\n} catch (e1) {\n  localValue = \"读取局部变量失败：\" + e1;\n}\ntry {\n  globalValue = String(globalVarOf$全局示例);\n} catch (e2) {\n  globalValue = \"读取全局变量失败：\" + e2;\n}\nvar result = \"【JS任务返回】\\n局部变量=\" + localValue + \"\\n全局变量=\" + globalValue;\nresult;",
+      "customContextDataKey": {
+        "keys": [
+          {
+            "first": "jsRet",
+            "second": "jsDemoOutput"
+          }
+        ]
+      },
+      "note": "JS 任务：单独读取局部变量和全局变量，并把 jsRet 命名为 jsDemoOutput",
+      "id": "A-9f7f3b06-c0e5-4e5b-96aa-a19abfbc182a"
+    },
+    {
+      "@type": "type.googleapis.com/ShowToast",
+      "message": "{jsDemoOutput}",
+      "customContextDataKey": {},
+      "note": "Toast 输出 JS 任务返回内容",
+      "id": "A-1c444ac8-e39c-49f1-83f5-569469bd3447"
+    },
+    {
+      "@type": "type.googleapis.com/WriteClipboard",
+      "text": "Shell输出：\n{shellDemoOutput}\n\nJS输出：\n{jsDemoOutput}",
+      "customContextDataKey": {},
+      "note": "同时写入剪贴板，方便复制核对 Shell 和 JS 的返回内容",
+      "id": "A-141ef932-756e-4ada-a73b-47e275bf4271"
+    }
+  ],
+  "id": "SHARED-DA-a45241e1-8c6c-4b04-a391-393e4b10baa9",
+  "lastUpdateTime": "1780445607823",
+  "createTime": "1780442537469",
+  "author": {
+    "name": "林深见鹿@xin-blog.com"
+  },
+  "title": "变量调用示例",
+  "description": "演示 ShortX 一键指令中 Shell 任务和 JS 任务分别执行，并用 Toast 分别输出两边的返回内容。\nShell：局部变量用 {局部示例}，全局变量用 {globalVarOf$全局示例}。\nJS：局部变量用 localVarOf$局部示例，全局变量用 globalVarOf$全局示例。\n执行后会先 Toast 显示 Shell 输出，再 Toast 显示 JS 输出，并把两段内容写入剪贴板。",
+  "icon": "braces",
+  "iconColor": "monet",
+  "versionCode": "2",
+  "directActionSetId": "DS-639a3878-9017-44eb-b0c0-9a35111567e3",
+  "asyncMode": "AsyncMode_Async",
+  "actionAsyncMode": "ActionAsyncMode_Sync",
+  "hook": {},
+  "quit": {}
+}
+###------###
+{"type":"da"}

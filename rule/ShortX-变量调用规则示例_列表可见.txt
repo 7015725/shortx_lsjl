@@ -1,0 +1,40 @@
+{
+  "facts": [
+    {
+      "@type": "type.googleapis.com/Broadcast",
+      "actions": [
+        "shortx.var.demo.VISIBLE_RULE"
+      ],
+      "customContextDataKey": {},
+      "id": "F-1b254f17-07c7-4b1f-a81b-fbd0438cf93b"
+    }
+  ],
+  "conditions": [],
+  "actions": [
+    {
+      "@type": "type.googleapis.com/ShowDanmu",
+      "text": "变量调用规则示例：Shell局部={局部示例}；Shell全局={globalVarOf$全局示例}；JS局部=localVarOf$局部示例；JS全局=globalVarOf$全局示例。完整可执行示例请运行一键指令「变量调用示例」。",
+      "customContextDataKey": {},
+      "note": "列表可见版：用已验证成功的 Broadcast + ShowDanmu 规则结构展示变量写法",
+      "id": "A-0839c54f-7042-4f7b-9794-e82f0c2d9932"
+    }
+  ],
+  "id": "SHARE-rule-2486ee6c-466c-4d76-b105-076181c59129",
+  "lastUpdateTime": "1780444777311",
+  "createTime": "1780444777311",
+  "author": {
+    "name": "林深见鹿@xin-blog.com"
+  },
+  "title": "变量调用规则示例_列表可见",
+  "description": "列表可见版规则实例：采用之前验证成功的 Broadcast + ShowDanmu 结构，展示 Shell 和 JS 中读取局部变量、全局变量的写法。触发广播 action：shortx.var.demo.VISIBLE_RULE。完整可执行变量链路在一键指令「变量调用示例」。",
+  "versionCode": "1",
+  "ruleSetId": "RS-83b8711b-f19f-4dfd-b6fb-fc9b70315be0",
+  "isEnabled": true,
+  "condOp": "ANY",
+  "icon": "notification-badge-line",
+  "iconColor": "monet",
+  "hook": {},
+  "quit": {}
+}
+###------###
+{"type":"rule"}
