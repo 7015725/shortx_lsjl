@@ -1,0 +1,82 @@
+{
+  "facts": [{
+    "@type": "type.googleapis.com/MethodHook",
+    "packageName": "com.android.providers.media.module",
+    "className": "com.android.providers.media.MediaProvider$5",
+    "methodName": "onUpdate",
+    "beforeMethod": true,
+    "expressions": [{
+      "expressionMVEL": "param.args[1].getPath()",
+      "contextKey": "mediaPendingPath"
+    }, {
+      "expressionMVEL": "oldPath \u003d param.args[1].getPath(); oldPath !\u003d null ? oldPath.replaceAll(\"/\\\\.pending-[0-9]+-\", \"/\") : null",
+      "contextKey": "mediaFinalPath"
+    }, {
+      "expressionMVEL": "item \u003d param.args[2]; volumeName \u003d param.args[1].getVolumeName(); id \u003d item.getId(); mediaTypeValue \u003d item.getMediaType(); pathPart \u003d mediaTypeValue \u003d\u003d 1 ? \"/images/media/\" : (mediaTypeValue \u003d\u003d 2 ? \"/audio/media/\" : (mediaTypeValue \u003d\u003d 3 ? \"/video/media/\" : \"/file/\")); \"content://media/\" + volumeName + pathPart + id",
+      "contextKey": "mediaUrl"
+    }, {
+      "expressionMVEL": "\"content://media/\" + param.args[1].getVolumeName() + \"/file/\" + param.args[2].getId()",
+      "contextKey": "mediaFileUrl"
+    }, {
+      "expressionMVEL": "param.args[2].getMediaType()",
+      "contextKey": "mediaType"
+    }, {
+      "expressionMVEL": "param.args[2].getOwnerPackageName()",
+      "contextKey": "mediaOwnerPkg"
+    }, {
+      "expressionMVEL": "param.args[1].isPending()",
+      "contextKey": "mediaOldIsPending"
+    }, {
+      "expressionMVEL": "param.args[2].isPending()",
+      "contextKey": "mediaIsPending"
+    }, {
+      "expressionMVEL": "param.args[2].isDownload()",
+      "contextKey": "mediaIsDownload"
+    }],
+    "lifecycle": "LoadedPackage",
+    "constraint": [{
+      "@type": "type.googleapis.com/MethodHookConstraintParamsCount",
+      "count": 3
+    }, {
+      "@type": "type.googleapis.com/MethodHookConstraintParamsType",
+      "type": ["com.android.providers.media.DatabaseHelper", "com.android.providers.media.dao.FileRow", "com.android.providers.media.dao.FileRow"]
+    }, {
+      "@type": "type.googleapis.com/MethodHookConstraintReturnType",
+      "type": "void"
+    }],
+    "customContextDataKey": {
+    },
+    "id": "F-7f89111e-85fe-45f2-a94e-b0b63799df76"
+  }],
+  "actions": [{
+    "@type": "type.googleapis.com/ShowAlertDialog",
+    "title": "媒体文件信息",
+    "message": "最终文件路径：{mediaFinalPath}\n原 pending 路径：{mediaPendingPath}\n媒体 URL，自动按图片/音频/视频分类：{mediaUrl}\n通用 Files URL：{mediaFileUrl}\n媒体类型：{mediaType}\n来源包名：{mediaOwnerPkg}\n旧 pending：{mediaOldIsPending}\n当前 pending：{mediaIsPending}\n是否下载：{mediaIsDownload}",
+    "cancelable": true,
+    "style": {
+      "fontScale": 1.0
+    },
+    "customContextDataKey": {
+    },
+    "id": "A-a7a464d4-0f06-45d8-a458-6b683a4a9ca2"
+  }],
+  "id": "SHARE-rule-d80d2af1-d561-4611-99d1-878ec709765f",
+  "lastUpdateTime": "1781433788917",
+  "createTime": "1781426589560",
+  "author": {
+    "name": "林深见鹿@xin-blog.com"
+  },
+  "title": "媒体库URL-最终文件",
+  "description": "监听媒体库 pending 状态结束，显示最终生成的文件路径和 content URI。\n\n应用名：媒体\n包名：com.android.providers.media.module\n版本名称：14\n版本代号：34\n\n作者：林深见鹿\n博客：xin-blog.com",
+  "isEnabled": true,
+  "hook": {
+  },
+  "quit": {
+  },
+  "versionCode": "1",
+  "ruleSetId": "RS-28323c0e-dbc1-4fc1-bbbf-7a5cea635f05",
+  "icon": "image",
+  "iconColor": "monet"
+}
+###------###
+{"type":"rule"}
