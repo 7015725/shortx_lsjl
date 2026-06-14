@@ -1,23 +1,12 @@
 {
   "directActions": [
     {
-      "id": "SHARED-DA-b2e26cd1-7754-4ad1-b42d-e14a83f2454c",
-      "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
-      "title": "ToolHub悬浮球_1.0.0",
-      "description": "一个悬浮在屏幕上的快捷面板。点一下浮球，就能展开一个多宫格面板，把常用的功能、应用、快捷指令都放进去，一键直达。",
+      "id": "SHARED-DA-c1c91cb2-a968-4f77-9c45-e3dc730d8c27",
+      "fileUrl": "ShortX-电池优化名单.txt",
+      "title": "电池优化名单",
+      "description": "v1.0\n两步 JS 一键指令：第一步反射读取电池优化名单和应用列表，通过上下文变量传递；第二步使用传入列表绘制 UI，并支持点击切换应用电池优化状态。\n作者：林深见鹿\n博客：xin-blog.com",
       "versionCode": 1,
-      "updateTimeMillis": 1779755375276,
-      "author": "林深见鹿@xin-blog.com",
-      "tags": [],
-      "requireMinShortXProtoVersion": 0
-    },
-    {
-      "id": "SHARED-DA-948414eb-42b8-4611-996a-3561037c6909",
-      "fileUrl": "ShortX-关闭ToolHub悬浮球.txt",
-      "title": "关闭ToolHub悬浮球",
-      "description": "发送广播关闭 ToolHub 悬浮球窗口。",
-      "versionCode": 1,
-      "updateTimeMillis": 1776987590188,
+      "updateTimeMillis": 1780654423988,
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
@@ -34,6 +23,17 @@
       "requireMinShortXProtoVersion": 0
     },
     {
+      "id": "SHARED-DA-948414eb-42b8-4611-996a-3561037c6909",
+      "fileUrl": "ShortX-关闭ToolHub悬浮球.txt",
+      "title": "关闭ToolHub悬浮球",
+      "description": "发送广播关闭 ToolHub 悬浮球窗口。",
+      "versionCode": 1,
+      "updateTimeMillis": 1776987590188,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARED-DA-06eca758-2edb-4275-b54a-fc3d6ef9dcdd",
       "fileUrl": "ShortX-快捷app.txt",
       "title": "快捷app",
@@ -45,23 +45,23 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-c1c91cb2-a968-4f77-9c45-e3dc730d8c27",
-      "fileUrl": "ShortX-电池优化名单.txt",
-      "title": "电池优化名单",
-      "description": "v1.0\n两步 JS 一键指令：第一步反射读取电池优化名单和应用列表，通过上下文变量传递；第二步使用传入列表绘制 UI，并支持点击切换应用电池优化状态。\n作者：林深见鹿\n博客：xin-blog.com",
+      "id": "SHARED-DA-42a4cd61-161d-4ddd-b17b-9bff7e137e6d",
+      "fileUrl": "ShortX-后台录音_启停.txt",
+      "title": "后台录音_启停",
+      "description": "v1.1\n一键开始/停止后台麦克风录音。首次点击开始，再次点击停止。\n文件保存到 /sdcard/Download/ShortX-Records。\n已增强错误检查：启动失败返回 ERROR；停止时检查文件是否存在和大小。\n\n依赖 App/包名：\n- Termux：com.termux，需在 Termux 执行 pkg install termux-api，提供 termux-microphone-record。\n- Termux:API：com.termux.api，需安装同源同签名 APK，并授权麦克风。\n- ShortX：tornaco.apps.shortx，仅负责触发命令，不替代 Termux:API 权限。\n\nroot 授权/修复命令：\nsu -c 'pm grant com.termux.api android.permission.RECORD_AUDIO'\nsu -c 'cmd appops set com.termux.api RECORD_AUDIO allow'\nsu -c 'cmd appops set com.termux MANAGE_EXTERNAL_STORAGE allow'\nsu -c 'cmd appops set com.termux.api MANAGE_EXTERNAL_STORAGE allow'\n\n说明：RECORD_AUDIO 只解决录音权限；写入 /sdcard/Download 还需要 com.termux/com.termux.api 具备共享存储/所有文件访问能力，否则会出现 open failed: EPERM。\n已使用 Binder+文件双写注入，保证立即可见并持久化。\n\n来源信息：xin-blog.com",
       "versionCode": 1,
-      "updateTimeMillis": 1780654423988,
-      "author": "林深见鹿@xin-blog.com",
+      "updateTimeMillis": 1780209957170,
+      "author": "ShortX",
       "tags": [],
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-e4319be9-80d7-481b-ad06-9e195145971c",
-      "fileUrl": "ShortX-待办事项.txt",
-      "title": "待办事项",
-      "description": "",
+      "id": "SHARED-DA-b2e26cd1-7754-4ad1-b42d-e14a83f2454c",
+      "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
+      "title": "ToolHub悬浮球_1.0.0",
+      "description": "一个悬浮在屏幕上的快捷面板。点一下浮球，就能展开一个多宫格面板，把常用的功能、应用、快捷指令都放进去，一键直达。",
       "versionCode": 1,
-      "updateTimeMillis": 1779691000927,
+      "updateTimeMillis": 1779755375276,
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
@@ -78,25 +78,25 @@
       "requireMinShortXProtoVersion": 0
     },
     {
-      "id": "SHARED-DA-42a4cd61-161d-4ddd-b17b-9bff7e137e6d",
-      "fileUrl": "ShortX-后台录音_启停.txt",
-      "title": "后台录音_启停",
-      "description": "v1.1\n一键开始/停止后台麦克风录音。首次点击开始，再次点击停止。\n文件保存到 /sdcard/Download/ShortX-Records。\n已增强错误检查：启动失败返回 ERROR；停止时检查文件是否存在和大小。\n\n依赖 App/包名：\n- Termux：com.termux，需在 Termux 执行 pkg install termux-api，提供 termux-microphone-record。\n- Termux:API：com.termux.api，需安装同源同签名 APK，并授权麦克风。\n- ShortX：tornaco.apps.shortx，仅负责触发命令，不替代 Termux:API 权限。\n\nroot 授权/修复命令：\nsu -c 'pm grant com.termux.api android.permission.RECORD_AUDIO'\nsu -c 'cmd appops set com.termux.api RECORD_AUDIO allow'\nsu -c 'cmd appops set com.termux MANAGE_EXTERNAL_STORAGE allow'\nsu -c 'cmd appops set com.termux.api MANAGE_EXTERNAL_STORAGE allow'\n\n说明：RECORD_AUDIO 只解决录音权限；写入 /sdcard/Download 还需要 com.termux/com.termux.api 具备共享存储/所有文件访问能力，否则会出现 open failed: EPERM。\n已使用 Binder+文件双写注入，保证立即可见并持久化。\n\n来源信息：xin-blog.com",
+      "id": "SHARED-DA-e4319be9-80d7-481b-ad06-9e195145971c",
+      "fileUrl": "ShortX-待办事项.txt",
+      "title": "待办事项",
+      "description": "",
       "versionCode": 1,
-      "updateTimeMillis": 1780209957170,
-      "author": "ShortX",
+      "updateTimeMillis": 1779691000927,
+      "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
     }
   ],
   "rules": [
     {
-      "id": "SHARE-rule-73955b5d-5207-494d-9541-07e953da486c",
-      "fileUrl": "ShortX-ToolHub_shell执行.txt",
-      "title": "ToolHub_shell执行",
-      "description": "",
+      "id": "SHARE-rule-b9fa3e1a-cb0c-41fe-ba94-15e67db03756",
+      "fileUrl": "ShortX-获取系统下载链接.txt",
+      "title": "获取系统下载链接",
+      "description": "com.android.providers.downloads\n\n设备一加ace3",
       "versionCode": 1,
-      "updateTimeMillis": 1773935826928,
+      "updateTimeMillis": 1779872478093,
       "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
@@ -113,6 +113,17 @@
       "requireMinShortXProtoVersion": 0
     },
     {
+      "id": "SHARE-rule-73955b5d-5207-494d-9541-07e953da486c",
+      "fileUrl": "ShortX-ToolHub_shell执行.txt",
+      "title": "ToolHub_shell执行",
+      "description": "",
+      "versionCode": 1,
+      "updateTimeMillis": 1773935826928,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARE-rule-cb3b4661-c61a-4d2e-8e40-81d167f46480",
       "fileUrl": "ShortX-待办事项广播监听.txt",
       "title": "待办事项广播监听",
@@ -120,17 +131,6 @@
       "versionCode": 1,
       "updateTimeMillis": 1780203057784,
       "author": "ShortX",
-      "tags": [],
-      "requireMinShortXProtoVersion": 0
-    },
-    {
-      "id": "SHARE-rule-b9fa3e1a-cb0c-41fe-ba94-15e67db03756",
-      "fileUrl": "ShortX-获取系统下载链接.txt",
-      "title": "获取系统下载链接",
-      "description": "com.android.providers.downloads\n\n设备一加ace3",
-      "versionCode": 1,
-      "updateTimeMillis": 1779872478093,
-      "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
     },
