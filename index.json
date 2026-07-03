@@ -45,6 +45,17 @@
       "requireMinShortXProtoVersion": 0
     },
     {
+      "id": "SHARED-DA-2f7b7750-a548-4230-bc01-d8b19b5ec42c",
+      "fileUrl": "ShortX-ToolHub悬浮球.txt",
+      "title": "ToolHub悬浮球",
+      "description": "ToolHub是一个可自定义的悬浮球工具箱。\n你可以把常用ShortX动作放进悬浮面板，随时点开使用；支持自定义按钮、图标、颜色、布局和悬浮球外观，并内置模块更新和校验机制，方便长期稳定使用。\n\nGitHub：https://github.com/7015725/Toolhub-FloatBall\nGitea：https://git.xin-blog.com/linshenjianlu/ShortX_ToolHub",
+      "versionCode": 1,
+      "updateTimeMillis": 1783054711892,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARED-DA-42a4cd61-161d-4ddd-b17b-9bff7e137e6d",
       "fileUrl": "ShortX-后台录音_启停.txt",
       "title": "后台录音_启停",
@@ -52,17 +63,6 @@
       "versionCode": 1,
       "updateTimeMillis": 1780209957170,
       "author": "ShortX",
-      "tags": [],
-      "requireMinShortXProtoVersion": 0
-    },
-    {
-      "id": "SHARED-DA-b2e26cd1-7754-4ad1-b42d-e14a83f2454c",
-      "fileUrl": "ShortX-ToolHub悬浮球_1.0.0.txt",
-      "title": "ToolHub悬浮球_1.0.0",
-      "description": "一个悬浮在屏幕上的快捷面板。点一下浮球，就能展开一个多宫格面板，把常用的功能、应用、快捷指令都放进去，一键直达。",
-      "versionCode": 1,
-      "updateTimeMillis": 1779755375276,
-      "author": "林深见鹿@xin-blog.com",
       "tags": [],
       "requireMinShortXProtoVersion": 0
     },
@@ -147,5 +147,5 @@
     }
   ],
   "codeLibraries": [],
-  "updateTimeMillis": 1781433788917
+  "updateTimeMillis": 1783054711892
 }
