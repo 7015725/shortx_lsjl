@@ -34,6 +34,17 @@
       "requireMinShortXProtoVersion": 0
     },
     {
+      "id": "SHARED-DA-02f11761-83f1-459e-b7b2-ab336073360b",
+      "fileUrl": "屏幕指针取字截图ocr.txt",
+      "title": "屏幕指针取字截图ocr",
+      "description": "拖动屏幕指针到文字位置后松手取字，或按住悬停 1 秒进入框选截图，并可对截图内容进行 OCR 文字识别；执行结果以简洁 JSON 返回，便于后续任务判断和处理。\n\n作者：林深见鹿\n博客：xin-blog.com",
+      "versionCode": 1,
+      "updateTimeMillis": 1783231680898,
+      "author": "林深见鹿@xin-blog.com",
+      "tags": [],
+      "requireMinShortXProtoVersion": 0
+    },
+    {
       "id": "SHARED-DA-06eca758-2edb-4275-b54a-fc3d6ef9dcdd",
       "fileUrl": "ShortX-快捷app.txt",
       "title": "快捷app",
@@ -147,5 +158,5 @@
     }
   ],
   "codeLibraries": [],
-  "updateTimeMillis": 1783054711892
+  "updateTimeMillis": 1783231680898
 }
